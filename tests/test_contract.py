@@ -16,6 +16,9 @@ def test_pareto_rule_is_deterministic_and_not_total_score():
 def test_duplicate_digest_cannot_mutate_frontier():
  assert SOURCE.index('if replay_key in self.attempted') < SOURCE.index('frontier=json.loads')
 
+def test_same_url_replay_is_rejected_before_nondeterminism():
+ assert SOURCE.index('if url_key in self.attempted') < SOURCE.index('measured=self._measure')
+
 def test_permissionless_seal_requires_three_evaluations():
  block=SOURCE[SOURCE.index('def seal_assay'):SOURCE.index('@gl.public.view',SOURCE.index('def seal_assay'))]
  assert 'gl.message.sender_address' not in block and "len(json.loads(assay.evaluated_ids))<3" in block

@@ -93,6 +93,8 @@ class ParetoCabinet(gl.Contract):
  def insert_candidate(self,assay_id:str,candidate_id:str,label:str,artifact_url:str)->dict:
   key,assay=self._assay(assay_id); cid=ident(candidate_id); name=clean(label,120); url=https(artifact_url)
   if assay.state!='OPEN' or cid in self.candidates or len(name)<4: raise gl.vm.UserError('[EXPECTED] open assay and unique labeled candidate required')
+  url_key=key+'|URL|'+url.lower()
+  if url_key in self.attempted: raise gl.vm.UserError('[EXPECTED] artifact URL already assayed')
   measured=self._measure(assay.spec_url,assay.spec_digest,json.loads(assay.constraints),url); replay_key=key+'|'+measured['artifact_digest']
   if replay_key in self.attempted: raise gl.vm.UserError('[EXPECTED] artifact already assayed')
   frontier=json.loads(assay.frontier_ids); penalties=measured['penalties']; dominated=False
@@ -107,7 +109,7 @@ class ParetoCabinet(gl.Contract):
      other.status='ECLIPSED'; self.candidates[other_id]=other
     else: kept.append(other_id)
    frontier=kept+[cid]
-  self.candidates[cid]=Candidate(gl.message.sender_address,key,name,url,measured['artifact_digest'],json.dumps(penalties),status); self.attempted[replay_key]=True
+  self.candidates[cid]=Candidate(gl.message.sender_address,key,name,url,measured['artifact_digest'],json.dumps(penalties),status); self.attempted[url_key]=True; self.attempted[replay_key]=True
   evaluated=json.loads(assay.evaluated_ids); evaluated.append(cid); assay.evaluated_ids=json.dumps(evaluated); assay.frontier_ids=json.dumps(frontier); self.assays[key]=assay
   return {'candidate_id':cid,'status':status,'penalties':penalties,'frontier_ids':frontier}
 
