@@ -1,12 +1,12 @@
 {
   "network": "StudioNet",
   "account": "IDAK2",
-  "contractAddress": "0xe1a49699D2d2405ECC441CaE9420D33a9f2E35fB",
-  "deploymentTransaction": "0x71f7b5dcc71c861aa5aec16fea00581fe9fd827a75a21cc56be10b812ac6ae70",
+  "contractAddress": "0x0d2b8C4aBAB5505BAF7901FcBe9E13Bf341E9EcD",
+  "deploymentTransaction": "0x3d4e763fd56550bfe4b37fbc176c8b221cb79da9b8f42b1c1eee582e8f447934",
   "deploymentConsensus": "MAJORITY_AGREE",
   "deploymentExecution": "SUCCESS",
-  "sourceSha256": "442155f6f4f09df50eceb944b80dc1e0899400cf029372da0547c61f9a625097",
-  "sourceCommit": "67473b3937b17f55b763c680a50b7c136e135a86",
+  "sourceSha256": "807aa7ea2347513eda7571db445890b9460161564fa725210cc3e3e3f3285edb",
+  "sourceCommit": "3c75dba6f99dec7668c2548c553f6eb238b25db0",
   "repository": "https://github.com/IDAK2/pareto-cabinet",
   "publicSite": "https://pareto-cabinet.pages.dev/"
 }

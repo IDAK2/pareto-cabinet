@@ -1,0 +1,15 @@
+{
+  "url": "https://pareto-cabinet.pages.dev/",
+  "verifiedAt": "2026-10-10",
+  "status": "PASS",
+  "checks": {
+    "publicPageLoaded": true,
+    "title": "Pareto Cabinet",
+    "contractAddressBound": "0x0d2b8C4aBAB5505BAF7901FcBe9E13Bf341E9EcD",
+    "walletActionVisible": true,
+    "completeLifecycleVisible": true,
+    "desktopLayout": "PASS",
+    "visualIdentity": "graphite assay bench with frontier wire and specimen drawers",
+    "accountNameAbsentFromHostname": true
+  }
+}

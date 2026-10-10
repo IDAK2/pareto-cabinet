@@ -1,0 +1,103 @@
+{
+  "assayId": "ASSAY-1791663013",
+  "contract": "0x0d2b8C4aBAB5505BAF7901FcBe9E13Bf341E9EcD",
+  "transactions": {
+    "open": "0x126166398f39713c7d767492bd0d1f9f8ac94a1f4e3bf9a98d43a70a62b45d85",
+    "SLATE": "0xf8c2da1c390320536f76db26876a23d6d020a679e3bf06aa60b8156024e1e852",
+    "BEACON": "0x714b13f03a17e8091483598ae587ab653d1899241b657d11c46e9b1e9aa79e16",
+    "discardedGlassTimeout": "0x0252249ecbd9ff0fe8a6104e73152d48a32dd6351e08ef22be0163a8cb57fd16",
+    "GLASS": "0x6f958adfd563daf6c591e7bd8a32179febedc6a7d08c3034027ace2694ef3476",
+    "replay": "0x3bad6044681f81009a36ba168158bd424134a5cf395f9f9b2fd2d84a1b66706b",
+    "seal": "0x73eeaa09d7d066411b4ec52af957a6596ce50ea06c11db71e4f480a1bc1c6d04"
+  },
+  "candidates": [
+    {
+      "id": "SLATE-1791663013",
+      "penalties": [
+        0,
+        0,
+        1
+      ],
+      "status": "FRONTIER",
+      "artifactDigest": "d1a89bdee6d11983742d85bef5a35625c725404d2be68775b364a3dc2df774a6"
+    },
+    {
+      "id": "BEACON-1791663013",
+      "penalties": [
+        1,
+        0,
+        0
+      ],
+      "status": "FRONTIER",
+      "artifactDigest": "ad23b1e311a171f341dc4c72cd3b848de5ba998820fad9cc598b216eae1cf353"
+    },
+    {
+      "id": "GLASS-1791663013",
+      "penalties": [
+        1,
+        1,
+        1
+      ],
+      "status": "DOMINATED",
+      "artifactDigest": "21dd87c0c4a70e40235bff8db4b0fef855ea13fbf6a10b78d07e82555999bc3d"
+    }
+  ],
+  "final": {
+    "constraints": [
+      {
+        "description": "Core reading and annotations remain usable without a continuous network connection.",
+        "id": "OFFLINE"
+      },
+      {
+        "description": "Every primary operation has a keyboard path and meaningful screen-reader labels.",
+        "id": "ACCESS"
+      },
+      {
+        "description": "Interrupted work is saved locally and can be restored after a browser or device restart.",
+        "id": "RECOVERY"
+      }
+    ],
+    "curator": "0xc8e8f5B7d61Da6eD160f474592627D65728b516e",
+    "evaluated_ids": [
+      "SLATE-1791663013",
+      "BEACON-1791663013",
+      "GLASS-1791663013"
+    ],
+    "frontier": [
+      {
+        "id": "SLATE-1791663013",
+        "label": "Slate reader",
+        "penalties": [
+          0,
+          0,
+          1
+        ],
+        "status": "FRONTIER"
+      },
+      {
+        "id": "BEACON-1791663013",
+        "label": "Beacon reader",
+        "penalties": [
+          1,
+          0,
+          0
+        ],
+        "status": "FRONTIER"
+      }
+    ],
+    "id": "ASSAY-1791663013",
+    "spec_digest": "aad41043e8e2405505c8087f3f371de1c27267b73661276f6ff7acfed706121d",
+    "spec_url": "https://raw.githubusercontent.com/IDAK2/pareto-cabinet/main/fixtures/brief.md",
+    "state": "SEALED",
+    "title": "Resilient reading station"
+  },
+  "duplicateArtifact": {
+    "consensus": "MAJORITY_AGREE",
+    "execution": [
+      "ERROR",
+      "ERROR"
+    ],
+    "frontierUnchanged": true
+  },
+  "fixtureDisclosure": "The brief and candidate artifacts are operator-controlled public fixtures used to prove digest pinning, semantic vectors, dominance, replay rejection, and sealing."
+}
